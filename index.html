@@ -62,10 +62,10 @@ style="color: white; font-size: 35px; position: absolute; right: 25px; top: 15px
           aria-hidden="true"
         ></i>
             <ul>
-              <li><a href="">About</a></li>
-              <li><a href="">Services</a></li>
-              <li><a href="">Projects</a></li>
-              <li><a href="">Contact</a></li>
+              <li class="list-item"><a href="">About</a></li>
+              <li class="list-item"><a href="">Services</a></li>
+              <li class="list-item"><a href="">Projects</a></li>
+              <li class="list-item"><a href="">Contact</a></li>
             </ul>
           </div>
           </div>
@@ -204,6 +204,24 @@ style="color: white; font-size: 35px; position: absolute; right: 25px; top: 15px
 </html>
 <script>
 
-  
+const cross = document.querySelector(".fa-times");
+const bars = document.querySelector(".fa-bars");
+
+
+const navItems = document.querySelectorAll(".list-item");
+const navSecond = document.querySelector('.nav-2nd');
+
+const toggleNav = ()=> {
+  navSecond.classList.toggle('showSecond');
+  console.log('done !')
+}
+cross.addEventListener('click', toggleNav);
+bars.addEventListener('click', toggleNav);
+
+navItems.forEach(item => {
+  item.addEventListener('click', toggleNav);
+})
+
+
 
 </script>
