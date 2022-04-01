@@ -4,7 +4,7 @@ $soft-red: hsl(7, 99%, 70%);
 $yellow: hsl(51, 100%, 49%);
 $dark-green: hsl(167, 40%, 24%);
 $dark-blue: hsl(198, 62%, 26%);
-$semi-green: hsl(168, 34%, 41%);
+$semi-green: hsl(168, 47%, 61%);
 
 $barlow-font: "Barlow", sans-serif;
 $fraunces-font: "Fraunces", serif;
@@ -23,9 +23,82 @@ li {
   list-style: none;
 }
 
+header {
+  overflow: hidden;
+}
+
+/*----------Navugation Bar----------*/
+.nav-container {
+  height: auto;
+}
+.nav-1st {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 30%;
+  i {
+    display: none;
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 35px;
+    margin-top: 25px;
+    li a {
+      color: white;
+      font-family: $fraunces-font;
+      font-size: larger;
+      text-decoration: none;
+    }
+  }
+  img {
+    margin-left: 35px;
+    margin-top: 25px;
+  }
+  @media (max-width: 1100px) {
+    ul {
+      display: none;
+    }
+
+    i {
+      display: block;
+    }
+    
+  }
+}
+
+.nav-2nd {
+  transform: translateX(100%);
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 55vh;
+  width: 50vw;
+  background-color: rgb(167, 164, 145);
+  border-radius: 3px;
+  z-index: 2;
+  ul {
+    padding-top: 25px;
+    display: flex;
+    height:90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    li {
+      width: fit-content;
+      padding: 10px;
+      background-color: #ece1c8;
+      border-radius: 4vw;
+      a {
+        font-family: $fraunces-font;
+        color: black;
+      }
+    }
+  }
+}
+
 
 /*-------Header styling---------*/
-
 
 header {
   background-image: url("/images/mobile/image-header.jpg");
@@ -38,54 +111,21 @@ header {
   }
 
   display: grid;
-  grid-template-rows: 10% 25% auto;
+  width: 100%;
 
-  .nav-container {
-    grid-row: 1/2;
-    display: grid;
-    grid-template-columns: 30% 70%;
-    width: 100vw;
-    font-family: $fraunces-font;
-    font-weight: 700;
-    img {
-      grid-column: 1;
-      padding: 3vw 3vw 0 1.5vw;
-      align-self: center;
-      justify-self: start;
-    }
-    ul {
-      display: flex;
-      flex-direction: row;
-      grid-column: 2;
-      align-self: center;
-      justify-self: end;
-      padding-right: 3%;
-      padding-top: 3vw;
-
-      li {
-        width: 9vw;
-        a {
-          color: white;
-        }
-      }
-    }
-  }
   h1 {
-    display: grid;
-    grid-template-columns: 1fr;
     justify-self: center;
     font-family: $fraunces-font;
     color: white;
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 50px;
+    z-index: 1;
     @media (max-width: 768px) {
       font-size: 32px;
     }
   }
 
   .header-arrow {
-    display: grid;
-    grid-template-columns: 1fr;
     justify-self: center;
     font-family: $fraunces-font;
     color: white;
@@ -96,8 +136,6 @@ header {
 
 /*-----------Section 1 Styling----------*/
 
-
-
 section {
   h3 {
     width: fit-content;
@@ -105,19 +143,17 @@ section {
 
   h3:after {
     content: "";
-  float: left;
-  background: #00a75d;
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  margin-top: 5px;
-  position: relative;
-  top: -13px;
-  opacity: 30%;
-  left: 7px;
+    float: left;
+    background: #00a75d;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    margin-top: 5px;
+    position: relative;
+    top: -13px;
+    opacity: 30%;
+    left: 7px;
   }
-
-
   .s1-1 {
     box-sizing: content-box;
   }
@@ -154,7 +190,7 @@ section {
     @media (min-width: 768px) {
       height: 800px;
       width: 100%;
-      
+
       h1 {
         padding-top: 15%;
         padding-bottom: 7.5%;
@@ -203,7 +239,7 @@ section {
     @media (min-width: 768px) {
       height: 100%;
       width: 100%;
-      
+
       h1 {
         padding-top: 15%;
         padding-bottom: 7.5%;
@@ -228,7 +264,6 @@ section {
         font-size: 56px;
       }
     }
-
   }
 
   @for $i from 1 through 6 {
@@ -246,5 +281,115 @@ section {
       height: 100%;
     }
   }
-  
+}
+
+/*---------Section 2 Styling ----------*/
+
+.s2 {
+  display: block;
+  background-color: rgb(255, 240, 223);
+  padding: 25px;
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  @for $i from 1 through 3 {
+    .s2-#{$i} {
+      height: 300px;
+      display: grid;
+      grid-template-rows: 40% 40% 10% 10%;
+      place-items: center;
+      img {
+        height: 75px;
+        border-radius: 15vw;
+      }
+      p {
+        font-family: $barlow-font;
+        width: 75%;
+        margin-left: 12.5%;
+        justify-self: start;
+        text-align: center;
+      }
+
+      h3 {
+        font-family: $fraunces-font;
+        font-weight: 900;
+      }
+
+      h5 {
+        font-family: $barlow-font;
+        color: grey;
+      }
+    }
+  }
+}
+
+/*---------Section 3 Styling ----------*/
+
+.s3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  @media (min-width: 735px) {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/*----------  Footer Stying -----------*/
+
+footer {
+  background-color: mix($semi-green, white, 70%);
+  display: grid;
+  grid-template-columns: 1fr;
+  width: auto;
+  place-items: center;
+  padding: 25px;
+  .footer-list {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 25px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+    h3 {
+      font-family: $fraunces-font;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h3:after {
+      content: "";
+      float: left;
+      background: $semi-green;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      margin-top: 5px;
+      position: relative;
+      top: -15px;
+      opacity: 30%;
+      left: 7px;
+    }
+  }
+}
+.footer-logo {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-around;
+  padding: 25px;
 }
