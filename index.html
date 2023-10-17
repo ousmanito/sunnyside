@@ -40,34 +40,49 @@
       <div class="nav-container">
         <div class="nav-1st">
           <a href="#"><img src="/images/logo.svg" alt="" /></a>
-        <ul class="nav-list">
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-        <i
-        class="fa fa-bars"
-style="color: white; font-size: 35px; position: absolute; right: 25px; top: 15px;cursor: pointer; z-index: 7;
-            "        aria-hidden="true"
-        ></i>
+          <ul class="nav-list">
+            <li><a href="">A propos</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Projets</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <i
+            class="fa fa-bars"
+            style="
+              color: white;
+              font-size: 35px;
+              position: absolute;
+              right: 25px;
+              top: 15px;
+              cursor: pointer;
+              z-index: 7;
+            "
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div class="nav-2nd">
+          <i
+            class="fa fa-times"
+            style="
+              color: white;
+              font-size: 35px;
+              position: absolute;
+              right: 25px;
+              top: 15px;
+              cursor: pointer;
+              z-index: 7;
+            "
+            aria-hidden="true"
+          ></i>
+          <ul>
+            <li class="list-item"><a href="">A propos</a></li>
+            <li class="list-item"><a href="">Services</a></li>
+            <li class="list-item"><a href="">Projets</a></li>
+            <li class="list-item"><a href="">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="nav-2nd">
-        <i
-          class="fa fa-times"
-          style="color: white; font-size: 35px; position: absolute; right: 25px; top: 15px;cursor: pointer; z-index: 7;
-          "
-          aria-hidden="true"
-        ></i>
-            <ul>
-              <li class="list-item"><a href="">About</a></li>
-              <li class="list-item"><a href="">Services</a></li>
-              <li class="list-item"><a href="">Projects</a></li>
-              <li class="list-item"><a href="">Contact</a></li>
-            </ul>
-          </div>
-          </div>
-      <h1>WE ARE CREATIVES</h1>
+      <h1>Transformer les idées en réalités numériques.</h1>
       <img class="header-arrow" src="/images/icon-arrow-down.svg" alt="" />
     </header>
     <!-- Première section -->
@@ -77,42 +92,44 @@ style="color: white; font-size: 35px; position: absolute; right: 25px; top: 15px
       </div>
 
       <div class="s1-2">
-        <h1>Transformer votre marque</h1>
+        <h1>Optimisez votre présence numérique</h1>
         <p>
-          We are a full-service creative agency specializing in helping brands
-          grow fast. Engage your clients through compelling visuals that do most
-          of the marketing for you.
+          Nous sommes une entreprise individuelle spécialisée dans le
+          développement fullstack, la data et le cloud. Engagez vos clients avec
+          des solutions technologiques robustes qui automatisent et améliorent
+          vos opérations.
         </p>
-        <a href=""><h3>Learn more</h3></a>
-      </div>
-
-      
-      <div class="s1-4">
-        <h1>Stand out to the right audience</h1>
-        <p>
-          Using a collaborative formula of designers, researchers,
-          photographers, videographers, and copywriters, we’ll build and extend
-          your brand in digital places.
-        </p>
-        <a href=""><h3>Learn more</h3></a>
+        <a href=""><h3>En savoir plus</h3></a>
       </div>
 
       <div class="s1-3">
         <img src="/images/desktop/lights.jpg" alt="" />
       </div>
-      <div class="s1-5">
-        <h1>Graphic design</h1>
+
+      <div class="s1-4">
+        <h1>Soyez à la pointe de la technologie</h1>
         <p>
-          Great design makes you memorable. We deliver artwork that underscores
-          your brand message and captures potential clients’ attention.
+          Grâce à une combinaison d'expertise en développement, en traitement de
+          données et en solutions cloud, nous vous aidons à renforcer et à
+          étendre votre présence numérique.
+        </p>
+        <a href=""><h3>En savoir plus</h3></a>
+      </div>
+      <div class="s1-5">
+        <h1>Développement d'applications</h1>
+        <p>
+          Un bon développement est la clé d'une présence en ligne réussie. Nous
+          fournissons des solutions qui renforcent votre message de marque et
+          captivent l'attention de vos clients potentiels.
         </p>
       </div>
 
       <div class="s1-6">
-        <h1>Photography</h1>
+        <h1>Solutions Cloud</h1>
         <p>
-          Increase your credibility by getting the most stunning, high-quality
-          photos that improve your business image.
+          Optimisez vos opérations et réduisez vos coûts avec des solutions
+          cloud sur mesure. Nous vous guidons dans la mise en place et la
+          gestion de votre infrastructure cloud.
         </p>
       </div>
     </section>
@@ -201,25 +218,20 @@ style="color: white; font-size: 35px; position: absolute; right: 25px; top: 15px
   </body>
 </html>
 <script>
+  const cross = document.querySelector(".fa-times");
+  const bars = document.querySelector(".fa-bars");
 
-const cross = document.querySelector(".fa-times");
-const bars = document.querySelector(".fa-bars");
+  const navItems = document.querySelectorAll(".list-item");
+  const navSecond = document.querySelector(".nav-2nd");
 
+  const toggleNav = () => {
+    navSecond.classList.toggle("showSecond");
+    console.log("done !");
+  };
+  cross.addEventListener("click", toggleNav);
+  bars.addEventListener("click", toggleNav);
 
-const navItems = document.querySelectorAll(".list-item");
-const navSecond = document.querySelector('.nav-2nd');
-
-const toggleNav = ()=> {
-  navSecond.classList.toggle('showSecond');
-  console.log('done !')
-}
-cross.addEventListener('click', toggleNav);
-bars.addEventListener('click', toggleNav);
-
-navItems.forEach(item => {
-  item.addEventListener('click', toggleNav);
-})
-
-
-
+  navItems.forEach((item) => {
+    item.addEventListener("click", toggleNav);
+  });
 </script>

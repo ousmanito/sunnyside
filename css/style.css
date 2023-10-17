@@ -228,7 +228,6 @@ section .s1-6 p {
 }
 section .s1-2,
 section .s1-4 {
-  background-color: rgb(255, 251, 248);
   display: block;
   height: -moz-fit-content;
   height: fit-content;
