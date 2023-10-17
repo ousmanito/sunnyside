@@ -70,8 +70,8 @@ header {
   top: 0;
   height: 55vh;
   width: 50vw;
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  background-color: navy;
+  background-image: linear-gradient(62deg, #807efb 0%, #3852e8 100%);
   border-radius: 3px;
 }
 .nav-2nd ul {
@@ -95,7 +95,7 @@ header {
 .nav-2nd li:after {
   content: "";
   float: left;
-  background: #eeea20;
+  background: #2408d7;
   width: 100%;
   height: 6px;
   border-radius: 3px;
@@ -128,16 +128,13 @@ header {
 }
 header h1 {
   justify-self: center;
-  font-family: "Fraunces", serif;
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
   color: white;
   margin-top: 5%;
-  font-size: 50px;
+  font-size: clamp(1.5rem, 6vw, 3rem);
   z-index: 1;
-}
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 32px;
-  }
 }
 header .header-arrow {
   justify-self: center;
@@ -343,6 +340,7 @@ section .s1-6 {
 }
 .s2 .s2-1 img {
   height: 75px;
+  width: 75px;
   border-radius: 15vw;
 }
 .s2 .s2-1 p {
@@ -368,6 +366,7 @@ section .s1-6 {
 }
 .s2 .s2-2 img {
   height: 75px;
+  width: 75px;
   border-radius: 15vw;
 }
 .s2 .s2-2 p {
@@ -393,6 +392,7 @@ section .s1-6 {
 }
 .s2 .s2-3 img {
   height: 75px;
+  width: 75px;
   border-radius: 15vw;
 }
 .s2 .s2-3 p {
@@ -457,13 +457,13 @@ footer .footer-list h3 {
 footer .footer-list h3:after {
   content: "";
   float: left;
-  background: hsl(168, 47%, 61%);
+  background: rgb(15, 169, 120);
   width: 100%;
   height: 6px;
   border-radius: 3px;
   margin-top: 5px;
   position: relative;
-  top: -15px;
+  top: -7px;
   opacity: 30%;
   left: 7px;
 }
