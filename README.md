@@ -1,12 +1,16 @@
-# Sunnyside Agency - Landing Page
+# Digital Slayers - Landing Page
 
 # Links
 
-- Solution URL: https://sunnyside-agency-landing-ousmanito.netlify.app/
+- URL: https://digitalslayers.net
 
 ## Screenshot of the Home page
+![Capture d’écran du 2023-10-18 01-08-26](https://github.com/ousmanito/sunnyside/assets/96242923/20c5c8b9-2ce0-4be9-925a-842193ce2588)
+![Capture d’écran du 2023-10-18 01-09-28](https://github.com/ousmanito/sunnyside/assets/96242923/9b075172-75e5-4db4-8767-fb709431beb7)
+![Capture d’écran du 2023-10-18 01-09-36](https://github.com/ousmanito/sunnyside/assets/96242923/8a97afa5-eee1-4470-9081-abf53263e7e0)
+![Capture d’écran du 2023-10-18 01-09-57](https://github.com/ousmanito/sunnyside/assets/96242923/1d1a4815-47d2-454f-8ad5-1a4f0ea443f1)
+![Capture d’écran du 2023-10-18 01-09-48](https://github.com/ousmanito/sunnyside/assets/96242923/b2fae09d-f25a-4447-a97d-3579ff35d1f5)
 
-![home-sun](https://user-images.githubusercontent.com/96242923/161287628-0c66b3c7-f206-4d12-898e-57f72de1a829.png)
 
 
 ## Table of contents
