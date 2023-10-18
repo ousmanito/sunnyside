@@ -228,6 +228,7 @@ section .s1-4 {
   display: block;
   height: -moz-fit-content;
   height: fit-content;
+  background-color: #fff;
 }
 section .s1-2 h1,
 section .s1-4 h1 {

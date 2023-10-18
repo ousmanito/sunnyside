@@ -126,7 +126,6 @@ header {
 /*-------Header styling---------*/
 
 header {
-  // background-image: url("/images/mobile/image-header.jpg");
   background-image: url("/images/desktop/green.jpg");
   height: 100vh;
   background-position: center;
@@ -243,6 +242,7 @@ section {
   .s1-4 {
     display: block;
     height: fit-content;
+    background-color: #fff;
     h1 {
       width: 77%;
       margin-left: 11.5%;
